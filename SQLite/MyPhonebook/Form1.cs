@@ -156,5 +156,33 @@
 
             btnCancel.Enabled = false;
         }
+
+        private void MnuDelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridView.SelectedRows.Count > 0)
+            {
+                var ID = dataGridView.SelectedRows[0].Cells[0].Value.ToString();
+
+                if(MessageBox.Show("Are you sure?", "Confirmation", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                {
+                    //Create a sql command
+                    SQLiteCommand sqlCommand = new SQLiteCommand();
+
+                    //Fill SQL command parameters
+                    sqlCommand.Connection = sqlConnection;
+                    sqlCommand.CommandType = CommandType.Text;
+                    sqlCommand.CommandText = "Delete From Persons Where ID=@ID";
+                    sqlCommand.Parameters.AddWithValue("@ID", ID);
+
+                    //Execute the command
+                    sqlConnection.Open();
+                    sqlCommand.ExecuteNonQuery();
+                    sqlConnection.Close();
+
+                    MessageBox.Show("Selected row is deleted!");
+                    ReadData();
+                }
+            }
+        }
     }
 }

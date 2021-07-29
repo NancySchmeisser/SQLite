@@ -176,13 +176,14 @@
             this.MnuDelete,
             this.MnuEdit});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(108, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 70);
             // 
             // MnuDelete
             // 
             this.MnuDelete.Name = "MnuDelete";
-            this.MnuDelete.Size = new System.Drawing.Size(107, 22);
+            this.MnuDelete.Size = new System.Drawing.Size(180, 22);
             this.MnuDelete.Text = "Delete";
+            this.MnuDelete.Click += new System.EventHandler(this.MnuDelete_Click);
             // 
             // MnuEdit
             // 
