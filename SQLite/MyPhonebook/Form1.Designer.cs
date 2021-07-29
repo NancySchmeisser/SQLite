@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,8 +42,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtPostCode = new System.Windows.Forms.TextBox();
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.btnSave = new System.Windows.Forms.Button();
+            this.BtnSave = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.MnuDelete = new System.Windows.Forms.ToolStripMenuItem();
+            this.MnuEdit = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtFirstName
@@ -148,27 +154,60 @@
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridView.Location = new System.Drawing.Point(0, 250);
+            this.dataGridView.MultiSelect = false;
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
             this.dataGridView.Size = new System.Drawing.Size(880, 377);
             this.dataGridView.TabIndex = 12;
             // 
-            // btnSave
+            // BtnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(121, 197);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 13;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.BtnSave.Location = new System.Drawing.Point(121, 197);
+            this.BtnSave.Name = "BtnSave";
+            this.BtnSave.Size = new System.Drawing.Size(75, 23);
+            this.BtnSave.TabIndex = 13;
+            this.BtnSave.Text = "Save";
+            this.BtnSave.UseVisualStyleBackColor = true;
+            this.BtnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MnuDelete,
+            this.MnuEdit});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(108, 48);
+            // 
+            // MnuDelete
+            // 
+            this.MnuDelete.Name = "MnuDelete";
+            this.MnuDelete.Size = new System.Drawing.Size(107, 22);
+            this.MnuDelete.Text = "Delete";
+            // 
+            // MnuEdit
+            // 
+            this.MnuEdit.Name = "MnuEdit";
+            this.MnuEdit.Size = new System.Drawing.Size(107, 22);
+            this.MnuEdit.Text = "Edit";
+            this.MnuEdit.Click += new System.EventHandler(this.MnuEdit_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(202, 197);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 15;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(880, 627);
-            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.BtnSave);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtPostCode);
@@ -189,6 +228,7 @@
             this.Text = "Phonebook";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,7 +249,11 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtPostCode;
         private System.Windows.Forms.DataGridView dataGridView;
-        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button BtnSave;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem MnuDelete;
+        private System.Windows.Forms.ToolStripMenuItem MnuEdit;
+        private System.Windows.Forms.Button btnCancel;
     }
 }
 
