@@ -18,8 +18,8 @@
             //Fill SQL command parameters
             sqlCommand.Connection = sqlConnection;
             sqlCommand.CommandType = System.Data.CommandType.Text;
-            // sqlCommand.CommandText = "Insert Into Customers (Name, Phone) Values('Ford', '03117722443')";
-            sqlCommand.CommandText = "Update Customers SET Phone='1222'";
+            
+            sqlCommand.CommandText = "Delete From Customers Where ID=1";
 
 
             //Execute the command
