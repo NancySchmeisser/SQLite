@@ -60,12 +60,12 @@ namespace MyPhonebook
             //Fill SQL command parameters
             sqlCommand.Connection = sqlConnection;
             sqlCommand.CommandType = CommandType.Text;
-            sqlCommand.CommandText = "Insert into Persons (FirstName,LastName,Email,Phone,Adress,Postcode) Values(@FirstName,@LastName,@Email,@Phone,@Adress,@Postcode)";
+            sqlCommand.CommandText = "Insert into Persons (FirstName,LastName,Email,Phone,Address,Postcode) Values(@FirstName,@LastName,@Email,@Phone,@Address,@Postcode)";
             sqlCommand.Parameters.AddWithValue("@FirstName", txtFirstName.Text);
             sqlCommand.Parameters.AddWithValue("@LastName", txtLastName.Text);
             sqlCommand.Parameters.AddWithValue("@Email", txtEmail.Text);
             sqlCommand.Parameters.AddWithValue("@Phone", txtPhone.Text);
-            sqlCommand.Parameters.AddWithValue("@Adress", txtAddress.Text);
+            sqlCommand.Parameters.AddWithValue("@Address", txtAddress.Text);
             sqlCommand.Parameters.AddWithValue("@Postcode", txtPostCode.Text);
 
             //Execute the command
