@@ -55,7 +55,7 @@
           //  else
                // UpdateData();
         }
-
+        
         private void NewData()
         {
             //Create a sql command
