@@ -22,7 +22,7 @@ namespace MyPhonebook
         {
             //Connection to SQLite
             SQLiteConnection sqlConnection = new SQLiteConnection();
-            sqlConnection.ConnectionString = "data source=C:\\Users\\Alireza\\Desktop\\SqliteCourse\\Phonebook.db";
+            sqlConnection.ConnectionString = "data source=C:\\Users\\user\\src\\SQLite Course\\MyConsoleApp\\SQLite\\MyPhonebook\\MyPhonebook\\Phonebook.db";
 
             //Define Select statement
             string commandText = "Select * from Persons";
